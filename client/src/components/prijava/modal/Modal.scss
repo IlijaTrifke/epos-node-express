@@ -1,0 +1,124 @@
+@import "../../../global.scss";
+
+.modalWrapper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  @include flex-center();
+  z-index: 2;
+}
+
+.ugasi {
+  border: 2px solid #0268dd3a;
+  outline: none;
+  text-decoration: none;
+  background-color: rgba(123, 39, 135, 0.7);
+  width: 5rem;
+  height: 3rem;
+  border-radius: 1rem;
+  color: $bela;
+  font-family: "Noto Sans";
+  position: relative;
+}
+
+.modalContainer p {
+  font-family: Noto Sans;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+.modalContainer {
+  scrollbar-width: thin;
+  min-height: 250px;
+  width: 25rem;
+  max-width: 85%;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 16px 16px;
+  border-radius: 15px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 36, 64, 0.87),
+    rgba(124, 39, 135, 0.507)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Orbitron";
+  color: $bela;
+  font-size: 1.2rem;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modalContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 0.2rem;
+  background: linear-gradient(
+    to right,
+    rgba(36, 188, 222, 0.5),
+    rgba(124, 39, 135, 0.5)
+  );
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.modalHeader {
+  margin-bottom: 24px;
+}
+
+.modalContent {
+  margin-bottom: 16px;
+}
+
+/* width */
+.modalContainer::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+.modalContainer::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+.modalContainer::-webkit-scrollbar-thumb {
+  background: #0070f3;
+  border-radius: 6px;
+  border: 3px solid white;
+  width: 3px;
+
+  transition: 250ms ease all;
+}
+
+/* Handle on hover */
+.modalContainer::-webkit-scrollbar-thumb:hover {
+  background: #0268dd;
+}
+
+@media (max-width: 460px) {
+  .modalContainer .inputRow {
+    flex-direction: column !important;
+    margin-bottom: 0;
+    gap: unset;
+  }
+
+  input {
+    margin-bottom: 16px;
+  }
+}

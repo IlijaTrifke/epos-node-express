@@ -1,0 +1,22 @@
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgba(0, 36, 64, 0.6),
+    rgba(123, 39, 135, 0.3)
+  );
+  z-index: -1000;
+}
+.loader {
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

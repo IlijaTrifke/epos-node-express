@@ -1,0 +1,506 @@
+@import "../../global.scss";
+
+input,
+textarea input:before,
+textarea:before,
+textarea:after,
+input:after {
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+}
+
+.modal {
+  position: fixed;
+  width: 50rem;
+  height: 30rem;
+  background-color: $tamnoPlava;
+  border-radius: 12px;
+  color: $bela;
+}
+
+.pr-prijava {
+  background-color: $tamnoPlava;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.pr-header {
+  width: 100%;
+  height: 6rem;
+  position: relative;
+}
+
+.errorClass {
+  border: 2px solid red !important;
+}
+
+// input[type="file"] {
+//   position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   padding: 0;
+//   margin: -1px;
+//   overflow: hidden;
+//   clip: rect(0, 0, 0, 0);
+//   border: 0;
+// }
+
+.pr-upload-input {
+  // height: 2.5rem;
+  width: 80%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: "Noto Sans", sans-serif;
+  background-color: $tamnoPlava;
+  color: $bela;
+  border: double 0.15rem transparent;
+  border-radius: 6px;
+  background-image: linear-gradient($tamnoPlava, $tamnoPlava),
+    linear-gradient(
+      150deg,
+      #24bdde,
+      rgba(107, 184, 206, 0.88),
+      rgba(16, 78, 126, 0.5),
+      rgba(71, 51, 153, 0.5),
+      rgba(113, 80, 185, 0.83),
+      #7b2787
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  margin: auto;
+}
+// .custom-file-upload {
+//   border: 1px solid #ccc;
+//   display: inline-block;
+//   padding: 6px 12px;
+//   cursor: pointer;
+//   color: $bela;
+//   background-color: $tamnoPlava;
+//   text-align: center;
+//   font-family: "Noto sans, sans-serif";
+//   width: 50%;
+//   font-size: 1.5rem;
+// }
+
+.pr-h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Orbitron", sans-serif;
+  color: $bela;
+  display: flex;
+  // text-shadow: -2px 0 $ljubicasta, 0 2px $ljubicasta, 2px 0 $ljubicasta,
+  //   0 -2px $ljubicasta;
+  font-size: 2.5rem;
+  white-space: nowrap;
+}
+
+.pr-exit-text {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  font-family: "Noto Sans", sans-serif;
+  font-size: 2rem;
+  color: $bela;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pr-exit {
+  margin-left: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.pr-exit-p {
+  transition: all 0.2s ease-in-out;
+}
+
+.pr-exit-text:hover > .pr-exit {
+  transform: scale(1.2) rotate(180deg);
+}
+.pr-exit-text:hover > .pr-exit-p {
+  transform: scale(1.2);
+}
+
+.pr-team-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.pr-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pr-members {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  width: 30rem;
+  position: relative;
+}
+
+.pr-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  background-color: rgba(6, 58, 86, 0.6);
+  margin-bottom: 5rem;
+  padding: 1rem;
+  height: 80%;
+}
+.pr-team-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  background-color: rgba(6, 58, 86, 0.6);
+  // margin-bottom: 10rem;
+  width: 40rem;
+  position: relative;
+}
+
+.pr-h1_m {
+  font-family: "Orbitron", sans-serif;
+  color: $bela;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.pr-lable {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: $bela;
+  word-wrap: break-word;
+  text-align: center;
+  margin: 0.5rem auto;
+  width: 90%;
+}
+
+.pr-lable span {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+// .pr-text-wrapper {
+//   width: 100%;
+//   position: relative;
+//   margin: auto;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.pr-lable-error {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5rem;
+  color: red;
+  word-wrap: break-word;
+  text-align: center;
+  width: 95%;
+  // margin-left: 2rem;
+  // margin-right: 2rem;
+  // margin-bottom: 2rem;
+  // margin-top: -2rem;
+  // position: absolute;
+}
+
+.pr-text {
+  height: 2.5rem;
+  font-family: "Noto Sans", sans-serif;
+  width: 80%;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: $tamnoPlava;
+  color: $bela;
+  border: solid 0.15rem transparent;
+  border-radius: 6px;
+  background-image: linear-gradient($tamnoPlava, $tamnoPlava),
+    linear-gradient(
+      150deg,
+      #24bdde,
+      rgba(107, 184, 206, 0.88),
+      rgba(16, 78, 126, 0.5),
+      rgba(71, 51, 153, 0.5),
+      rgba(113, 80, 185, 0.83),
+      #7b2787
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-color: rgba(0, 36, 64, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+.pr-select {
+  height: 2.5rem;
+  width: 80%;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  background-color: $tamnoPlava;
+  color: $bela;
+  border: double 0.15rem transparent;
+  border-radius: 6px;
+  background-image: linear-gradient($tamnoPlava, $tamnoPlava),
+    linear-gradient(
+      150deg,
+      #24bdde,
+      rgba(107, 184, 206, 0.88),
+      rgba(16, 78, 126, 0.5),
+      rgba(71, 51, 153, 0.5),
+      rgba(113, 80, 185, 0.83),
+      #7b2787
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  margin-bottom: 0.5rem;
+}
+
+.pr-team {
+  display: flex;
+  flex-direction: column;
+}
+
+.pr-kevin {
+  width: 30rem;
+  margin: 0 auto;
+}
+
+.pr-text-team {
+  height: 2.5rem;
+  width: 90%;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: $tamnoPlava;
+  color: $bela;
+  border: double 4px transparent;
+  border-radius: 6px;
+  background-image: linear-gradient($tamnoPlava, $tamnoPlava),
+    linear-gradient(to right, $svetloPlava, $svetloPlava);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  margin-bottom: 3.5rem;
+}
+
+.pr-text-team_textarea {
+  height: 20rem;
+  width: 80%;
+  font-size: 1.5rem;
+  background-color: $tamnoPlava;
+  color: $bela;
+  border: double 2px transparent;
+  border-radius: 15px;
+  background-image: linear-gradient($tamnoPlava, $tamnoPlava),
+    linear-gradient(to right, $svetloPlava, $ljubicasta);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  margin-bottom: 1rem;
+  resize: none;
+}
+
+.pr-footer {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.pr-footer-dugme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.pr-checkboxStyle {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  //justify-content: flex-end;
+}
+
+.pr-check {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.pr-check2 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.pr-temp {
+  display: flex;
+  align-items: center;
+}
+.pr-lable_check {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: $bela;
+  word-wrap: break-word;
+  text-align: center;
+  margin: 0.5rem auto;
+  width: 90%;
+}
+
+.pr-submit {
+  font-family: Orbitron;
+  @include flex-center();
+  width: 15rem;
+  height: 4rem;
+  background-image: linear-gradient(to right, $svetloPlava, $ljubicasta);
+  border-radius: 5rem;
+  font-size: 1.4rem;
+  color: $bela;
+  font-weight: 400;
+  top: 100%;
+  left: 50%;
+  cursor: pointer;
+  z-index: 100;
+  text-decoration: none;
+  border: 0;
+}
+
+.pr-blue-rectangle-blur {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  width: 50%;
+  height: 10%;
+  background-color: $svetloPlava;
+  filter: blur(10rem);
+  border-radius: 50%;
+  //animation: blurMoving 10s linear infinite;
+}
+
+.pr-ball-blur {
+  position: absolute;
+  top: 20%;
+  left: -2%;
+  width: 20%;
+  height: 30%;
+  background-color: $svetloPlava;
+  filter: blur(9rem);
+  border-radius: 50%;
+  //animation: blurMoving 10s linear infinite;
+}
+
+.pr-blue-ball-blur {
+  position: absolute;
+  top: 20%;
+  // left: -5%;
+  width: 10%;
+  height: 30%;
+  background-color: $svetloPlava;
+  filter: blur(7rem);
+  border-radius: 50%;
+}
+.pr-purple-rectangle-blur {
+  position: absolute;
+  top: 0%;
+  right: -15%;
+  width: 15%;
+  height: 30%;
+  background-color: $ljubicasta;
+  filter: blur(5rem);
+  border-radius: 50%;
+}
+
+.pr-blue-ball-blur2 {
+  position: absolute;
+  top: 70%;
+  // left: -5%;
+  width: 9%;
+  height: 30%;
+  background-color: $svetloPlava;
+  filter: blur(7rem);
+  border-radius: 50%;
+}
+.pr-purple-rectangle-blur2 {
+  position: absolute;
+  top: 70%;
+  right: -4%;
+  width: 10%;
+  height: 20%;
+  background-color: $ljubicasta;
+  filter: blur(6rem);
+  border-radius: 50%;
+}
+
+.animatedbar-wrapper {
+  height: 10px;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.animatedbar {
+  background-color: #24bdde;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .pr-h1 {
+    font-size: 2rem;
+  }
+
+  .pr-upload-input,
+  .pr-lable-error,
+  .pr-lable,
+  .pr-lable_check {
+    font-size: 1rem;
+  }
+
+  .pr-lable span {
+    font-size: 0.8rem;
+  }
+
+  .pr-h1_m {
+    font-size: 1.5rem;
+  }
+
+  .pr-exit-text p {
+    display: none;
+  }
+  .pr-exit {
+    width: 2rem;
+  }
+
+  .pr-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pr-members {
+    margin: auto;
+    width: 30rem;
+    max-width: 90%;
+  }
+  .pr-team-info {
+    margin: auto;
+    max-width: 90%;
+    width: 80%;
+  }
+  .pr-kevin {
+    display: none;
+  }
+  .pr-submit {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .pr-h1 {
+    font-size: 1.6rem;
+  }
+}

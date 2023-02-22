@@ -1,0 +1,127 @@
+// u vas scss importujete na sledeci nacin: @import "../../global.scss";
+// debljina gradijenta bordera-0.2rem okvirno
+//   background: linear-gradient(
+//   to right,
+//   rgba(36, 188, 222, 0.1),
+//   rgba(123, 39, 135, 0.1)
+// );
+// backdrop-filter: blur(0.05rem);
+// za naslove desktop font-size: 3rem;
+// za naslove mobile font-size: 2.5rem;
+
+// Breakpoints:
+// @media screen and (max-width: 1920px) {
+// }
+// @media screen and (max-width: 1200px) {
+// }
+// @media screen and (max-width: 960px) {
+// }
+// @media screen and (max-width: 620px) {
+// }
+// @media screen and (max-width: 480px) {  /od ovog pointa krece mobilna verzija/
+// }
+// @media screen and (max-width: 340px) {
+// }
+
+$ljubicasta: #7b2787; //Za detalje - na giveaway objavi je glow plav i  ljubicast
+$tamnoPlava: #002440; //Za pozadinu i detalje na svetloj
+$bela: #e8eff5; //Za pozadinu i detalje na tamnoj
+$svetloPlava: #24bdde; //Za detalje
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.App {
+  background-color: $tamnoPlava;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"); //u vasem scss-u kucate font-family: "Noto Sans", sans-serif;
+
+@font-face {
+  font-family: "Orbitron";
+  src: local("Orbitron"),
+    url("./fonts/Orbitron-VariableFont_wght.ttf") format("truetype");
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-gap {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+}
+
+.dveSekcijePO {
+  background-color: $tamnoPlava;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.balls-wrapper {
+  width: 100%;
+  min-height: 180vh;
+  position: absolute;
+  overflow: hidden;
+  top: 20%;
+  left: 0;
+}
+
+.blue-ball-blur {
+  position: absolute;
+  top: 20%;
+  left: -5%;
+  width: 20%;
+  height: 30%;
+  background-color: $svetloPlava;
+  filter: blur(7rem);
+  border-radius: 50%;
+  animation: blurMoving 10s linear infinite;
+}
+.purple-rectangle-blur {
+  position: absolute;
+  top: 20%;
+  left: 90%;
+  width: 20%;
+  height: 30%;
+  background-color: $ljubicasta;
+  filter: blur(5rem);
+  border-radius: 50%;
+  animation: blurMoving 10s linear infinite;
+}
+
+@keyframes blurMoving {
+  0% {
+    transform: rotate(0deg) translate(-100px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-100px) rotate(-360deg);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .blue-ball-blur {
+    filter: blur(6rem);
+    width: 40%;
+    top: 20%;
+  }
+  .purple-rectangle-blur {
+    filter: blur(3rem);
+    width: 40%;
+    top: 10%;
+  }
+}
