@@ -7,9 +7,6 @@ const path = require("path");
 
 let transporter = nodemailer.createTransport({
   service: "gmail",
-  type: "SMTP",
-  host: "smtp.gmail.com",
-  // port: 587,
   secure: false,
   auth: {
     user: process.env.EMAIL,
@@ -18,8 +15,8 @@ let transporter = nodemailer.createTransport({
 });
 
 let potvrdaMail = {
-  subject: "[FON HAKATON 2023][FONIS] - Uspešno evidentirana prijava",
-  html: '<p>Po&scaron;tovani,</p> <p><br></p> <p>Va&scaron;a prijava za programersko takmičenje <strong>FON HAKATON 2023</strong> je <strong>uspe&scaron;no evidentirana</strong>.</p> <p><br></p> <p>Vi&scaron;e informacija možete očekivati nakon zatvaranja prijava.</p> <p><br></p> <p>Pozdrav,</p> <div> <div> <div align="left"> <table> <tbody> <tr> <td> <p><img src="https://lh5.googleusercontent.com/zzJV9API8HKKnyre6Q565fd22LqzDgFWUO67kAX6DR2AECHJkAkg8F3rXrFFlZOz6-u_Heag4YJNR_jR6bo2Py-JKh2R5uig1VnhLWYmnjhYNlN4mVQb52KFYX3uHvNHpwIQf8jRU_FrmoBxZzb3ICL7tKugfAyosFujsfEZI6WGrE6lPOTwrwJyfEeG95WO" width="151" height="151"></p> </td> </tr> </tbody> </table> </div>Ilija Trifunović<br>Koordinator tima za informacione tehnologije<br>na projektu FON Hakaton 2023.<br><br>Mejl:&nbsp;<a href="mailto:ilija.trifunovic@fonis.rs" target="_blank">ilija.trifunovic@fonis.rs<br></a>Adresa: Jove Ilića 154, Beograd </div> </div>',
+  subject: "[BASKET 3na3] - Uspešno evidentirana prijava",
+  html: '<p>Po&scaron;tovani,</p> <p><br></p> <p>Va&scaron;a prijava za takmičenje u ko&scaron;arci <strong>Basket 3na3</strong> je <strong>uspe&scaron;no evidentirana</strong>.</p> <p><br></p> <p>Vi&scaron;e informacija možete očekivati nakon zatvaranja prijava.</p> <p><br></p> <p>Pozdrav,</p> <div> <div> <div align="left"> <table> <tbody> <tr> <td> <p><img src="https://lh5.googleusercontent.com/zzJV9API8HKKnyre6Q565fd22LqzDgFWUO67kAX6DR2AECHJkAkg8F3rXrFFlZOz6-u_Heag4YJNR_jR6bo2Py-JKh2R5uig1VnhLWYmnjhYNlN4mVQb52KFYX3uHvNHpwIQf8jRU_FrmoBxZzb3ICL7tKugfAyosFujsfEZI6WGrE6lPOTwrwJyfEeG95WO" width="151" height="151"></p> </td> </tr> </tbody> </table> </div>Ilija Trifunović<br>Koordinator tima za informacione tehnologije<br>na projektu FON Hakaton 2023.<br><br>Mejl:&nbsp;<a href="mailto:ilija.trifunovic@fonis.rs" target="_blank">ilija.trifunovic@fonis.rs<br></a>Adresa: Jove Ilića 154, Beograd </div> </div>',
 };
 
 const sendEmail = (to, subject, html) => {
