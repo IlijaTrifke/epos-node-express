@@ -1,25 +1,31 @@
+//express - importovanje express frameworka
 const express = require("express");
+
+//importovanje cors-a(cross origin resource sharing)
 const cors = require("cors");
 require("dotenv").config();
+
+//smeštanje express-a u našu promenljivu preko koje dalje pozivamo express funkcije
 const app = express();
 
+//definisanje opcija cors-a koje služe da kontrolišu ko može da post-uje na naš server
 const corsOptions = {
   origin: "*",
   credentials: true,
   optionSuccessStatus: 200,
 };
 
-//errors
+//errors - importovanje naše funkcije koja će da hendluje errore
 const errorHandlerMiddleware = require("./errors/errorHandlerMiddleware");
 
-//routes
+//routes - importvanje naše rute na koju će sve prijave biti poslate u bazu
 const routerPrijave = require("./routes/prijave");
 
-//db
+//db - importovanje naše funkcije za konektovanje sa mongoDB bazom
 const connectDB = require("./db/connect.js");
 
-//midleware
-app.use(cors(corsOptions)); // Use this after the variable declaration
+//midleware - korišćenje cors-a, pravljenje header-a i respond-a za početnu rutu(/)
+app.use(cors(corsOptions));
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   next();
@@ -29,17 +35,19 @@ app.get("/", (req, res) => {
   res.send("App is running");
 });
 
-//routes
+//routes - korišćenje naše rute
 app.use("/prijave/api", routerPrijave);
 
-//errors
+//errors - korišćenje našeg error hendlera
 app.use(errorHandlerMiddleware);
 
-//server start
+//definisanje funkcije koja pokreće server
 const startServer = async () => {
   try {
+    //samo konektovanje s bazom
     await connectDB(process.env.MONGO_URI);
     let PORT = process.env.PORT || 5001;
+    //sluašanje servera na određenom portu
     app.listen(PORT, () => {
       console.log("server on port: " + PORT);
     });
@@ -48,6 +56,7 @@ const startServer = async () => {
   }
 };
 
+//pokretanje servera
 startServer();
 
 module.exports = app;
