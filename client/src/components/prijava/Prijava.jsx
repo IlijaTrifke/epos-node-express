@@ -423,7 +423,8 @@ const Prijava = () => {
                   </label>
                 )}
                 <lable class="pr-lable" for="pr-cv_m1">
-                  Vaš CV<span>(u pdf-u)</span>
+                  Ukratko opišite Vaše iskustvo u košarci, priložite file
+                  <span>(u pdf-u)</span>
                 </lable>
 
                 <FileUploadButton
@@ -530,7 +531,8 @@ const Prijava = () => {
                   </label>
                 )}
                 <lable class="pr-lable" for="pr-cv_m2">
-                  Vaš CV<span>(u pdf-u)</span>
+                  Ukratko opišite Vaše iskustvo u košarci, priložite file
+                  <span>(u pdf-u)</span>
                 </lable>
 
                 <FileUploadButton
@@ -637,7 +639,8 @@ const Prijava = () => {
                   </label>
                 )}
                 <lable class="pr-lable" for="pr-cv_m3">
-                  Vaš CV<span>(u pdf-u)</span>
+                  Ukratko opišite Vaše iskustvo u košarci, priložite file
+                  <span>(u pdf-u)</span>
                 </lable>
 
                 <FileUploadButton
@@ -741,7 +744,8 @@ const Prijava = () => {
                   </label>
                 )}
                 <lable class="pr-lable" for="pr-cv_m4">
-                  Vaš CV<span>(u pdf-u)</span>
+                  Ukratko opišite Vaše iskustvo u košarci, priložite file
+                  <span>(u pdf-u)</span>
                 </lable>
 
                 <FileUploadButton
@@ -776,8 +780,7 @@ const Prijava = () => {
                   <label class="pr-lable-error">Ime tima je obavezno!</label>
                 )}
                 <lable class="pr-lable" for="pr-iskustvo">
-                  Navedite i opišite prethodna iskustva u grupnom radu, a ako do
-                  sada niste radili zajedno, opišite vaša pojedinačna iskustva.
+                  Šta očekujete od ovog takmičenja?
                 </lable>
                 <textarea
                   class={`pr-text-team_textarea ${
@@ -791,8 +794,8 @@ const Prijava = () => {
                   <label class="pr-lable-error">Ovo polje je obavezno!</label>
                 )}
                 <lable class="pr-lable" for="pr-vrline">
-                  Šta vas je navelo da se prijavite na hakaton i šta želite da
-                  postignete i naučite učestvovanjem na ovom takmičenju?
+                  Šta vas je navelo da se prijavite za ovo takmičenje i šta je
+                  Vaš cilj?
                 </lable>
                 <textarea
                   class={`pr-text-team_textarea ${
@@ -834,7 +837,8 @@ const Prijava = () => {
                     }}
                   ></input>
                   <label class="pr-lable_check">
-                    Želimo da dobijamo obaveštenja o FONIS aktivnostima
+                    Želimo da dobijamo obaveštenja o Lord of the basket
+                    aktivnostima
                   </label>
                 </div>
                 <div class="pr-checkboxStyle">

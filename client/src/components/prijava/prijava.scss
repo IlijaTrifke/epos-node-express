@@ -16,13 +16,13 @@ input:after {
   position: fixed;
   width: 50rem;
   height: 30rem;
-  background-color: $tamnoPlava;
+  background-color: darkgoldenrod;
   border-radius: 12px;
   color: $bela;
 }
 
 .pr-prijava {
-  background-color: $tamnoPlava;
+  background-color: darkgoldenrod;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -36,7 +36,7 @@ input:after {
 }
 
 .errorClass {
-  border: 2px solid red !important;
+  border: 2px solid rgb(63, 199, 176) !important;
 }
 
 // input[type="file"] {
@@ -57,19 +57,19 @@ input:after {
   font-size: 1.5rem;
   font-weight: 300;
   font-family: "Noto Sans", sans-serif;
-  background-color: $tamnoPlava;
+  background-color: #979028;
   color: $bela;
   border: double 0.15rem transparent;
   border-radius: 6px;
-  background-image: linear-gradient($tamnoPlava, $tamnoPlava),
+  background-image: linear-gradient(#7921ac, #1db38d),
     linear-gradient(
       150deg,
-      #24bdde,
-      rgba(107, 184, 206, 0.88),
-      rgba(16, 78, 126, 0.5),
-      rgba(71, 51, 153, 0.5),
-      rgba(113, 80, 185, 0.83),
-      #7b2787
+      #bac743,
+      rgba(206, 148, 41, 0.88),
+      rgba(122, 108, 29, 0.5),
+      rgba(201, 89, 25, 0.5),
+      rgba(135, 199, 32, 0.83),
+      #cecb1f
     );
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -155,7 +155,7 @@ input:after {
   flex-direction: column;
   align-items: center;
   border-radius: 2rem;
-  background-color: rgba(6, 58, 86, 0.6);
+  background-color: rgba(170, 172, 80, 0.6);
   margin-bottom: 5rem;
   padding: 1rem;
   height: 80%;
@@ -165,7 +165,7 @@ input:after {
   flex-direction: column;
   align-items: center;
   border-radius: 2rem;
-  background-color: rgba(6, 58, 86, 0.6);
+  background-color: rgba(170, 172, 80, 0.6);
   // margin-bottom: 10rem;
   width: 40rem;
   position: relative;
@@ -207,7 +207,7 @@ input:after {
 .pr-lable-error {
   font-family: "Noto Sans", sans-serif;
   font-size: 1.5rem;
-  color: red;
+  color: rgb(141, 57, 57);
   word-wrap: break-word;
   text-align: center;
   width: 95%;
@@ -228,15 +228,15 @@ input:after {
   color: $bela;
   border: solid 0.15rem transparent;
   border-radius: 6px;
-  background-image: linear-gradient($tamnoPlava, $tamnoPlava),
+  background-image: linear-gradient(#99b437, #ddb918),
     linear-gradient(
       150deg,
-      #24bdde,
-      rgba(107, 184, 206, 0.88),
-      rgba(16, 78, 126, 0.5),
-      rgba(71, 51, 153, 0.5),
-      rgba(113, 80, 185, 0.83),
-      #7b2787
+      #979028,
+      rgba(216, 151, 29, 0.88),
+      rgba(147, 175, 47, 0.5),
+      rgba(206, 162, 42, 0.5),
+      rgba(119, 172, 23, 0.83),
+      #707c43
     );
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -255,15 +255,15 @@ input:after {
   color: $bela;
   border: double 0.15rem transparent;
   border-radius: 6px;
-  background-image: linear-gradient($tamnoPlava, $tamnoPlava),
+  background-image: linear-gradient(#dad050, #d89a15),
     linear-gradient(
       150deg,
-      #24bdde,
-      rgba(107, 184, 206, 0.88),
-      rgba(16, 78, 126, 0.5),
-      rgba(71, 51, 153, 0.5),
-      rgba(113, 80, 185, 0.83),
-      #7b2787
+      #ded224,
+      rgba(139, 117, 20, 0.88),
+      rgba(164, 197, 110, 0.5),
+      rgba(173, 136, 14, 0.5),
+      rgba(162, 196, 40, 0.83),
+      #867a09
     );
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -289,7 +289,7 @@ input:after {
   color: $bela;
   border: double 4px transparent;
   border-radius: 6px;
-  background-image: linear-gradient($tamnoPlava, $tamnoPlava),
+  background-image: linear-gradient(#979028, #c99916),
     linear-gradient(to right, $svetloPlava, $svetloPlava);
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -304,7 +304,7 @@ input:after {
   color: $bela;
   border: double 2px transparent;
   border-radius: 15px;
-  background-image: linear-gradient($tamnoPlava, $tamnoPlava),
+  background-image: linear-gradient(#979028, #dabb0e),
     linear-gradient(to right, $svetloPlava, $ljubicasta);
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -361,7 +361,7 @@ input:after {
   @include flex-center();
   width: 15rem;
   height: 4rem;
-  background-image: linear-gradient(to right, $svetloPlava, $ljubicasta);
+  background-image: linear-gradient(to right, #9caf2d, #d35908);
   border-radius: 5rem;
   font-size: 1.4rem;
   color: $bela;
@@ -443,11 +443,11 @@ input:after {
 .animatedbar-wrapper {
   height: 10px;
   width: 80%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(34, 206, 149, 0.1);
 }
 
 .animatedbar {
-  background-color: #24bdde;
+  background-color: #6c7409;
   height: 100%;
 }
 
